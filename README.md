@@ -9,7 +9,7 @@ Uses [decomment] to remove comments from JSON, JavaScript, CSS, HTML, etc.
 $ npm install grunt-decomment --save-dev
 ```
 
-## Usage
+## Example
 
 ```js
 module.exports = function (grunt) {
