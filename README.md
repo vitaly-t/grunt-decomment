@@ -32,7 +32,7 @@ module.exports = function (grunt) {
                 files: {
                     "output.css": "input.css", // decomment a CSS file;
                     "output.cpp": "input.cpp", // decomment a CPP file;
-                    "output.h": "input.h" // decomment a CPP header file;
+                    "output.h": "input.h" // decomment a C++ header file;
                 }
             },
             html: {
