@@ -63,8 +63,6 @@ Changes the default call into [decomment] to one according to the value:
 * `text` - use method [decomment.text]
 * `html` - use method [decomment.html]
 
-Changes the default call into decomment 
-
 #### trim
 
 Applies option [trim], as supported by [decomment].
