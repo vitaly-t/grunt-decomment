@@ -6,16 +6,20 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('decomment', 'Removes comments from files.', function () {
 
-        var files = this.files.filter(function (f) {
-            if (grunt.file.exists(f.src[0])) {
-                return true;
-            }
-            grunt.log.warn('Source file "' + f.src + '" not found.');
-        });
-
-        if (!files.length) {
-            return;
-        }
+        var files = this.files.map(function (f) {
+                var result = {
+                    src: f.orig.src.length ? f.orig.src[0] : '',
+                    dest: f.dest
+                }
+                if (grunt.file.exists(result.src)) {
+                    return result;
+                }
+                grunt.log.warn('Source file "' + result.src + '" not found.');
+                return null;
+            })
+            .filter(function (f) {
+                return !!f;
+            });
 
         var type, opt = this.options();
 
@@ -32,13 +36,12 @@ module.exports = function (grunt) {
         }
 
         files.forEach(function (f) {
-            var src = f.src[0];
-            var code = grunt.file.read(src);
+            var code = grunt.file.read(f.src);
             var result;
             try {
                 result = type(code, opt);
             } catch (e) {
-                grunt.log.warn("Failed to decomment file '" + src + "'");
+                grunt.log.warn("Failed to decomment file '" + f.src + "'");
                 throw e;
             }
             grunt.file.write(f.dest, result);
