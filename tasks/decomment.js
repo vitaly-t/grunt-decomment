@@ -32,8 +32,6 @@ module.exports = function (grunt) {
                 break;
         }
 
-        grunt.log.writeln();
-
         files.forEach(function (f) {
             var code = grunt.file.read(f.src);
             var result;

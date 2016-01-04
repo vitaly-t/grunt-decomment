@@ -65,7 +65,7 @@ Changes the default call into [decomment] to one according to the value:
 
 #### safe, space, trim
 
-Corresponding options, as supported by [decomment]:
+Options supported by [decomment]:
 
 * [safe]
 * [space]
