@@ -63,13 +63,13 @@ Changes the default call into [decomment] to one according to the value:
 * `text` - use method [decomment.text]
 * `html` - use method [decomment.html]
 
-#### trim
+#### safe, space, trim
 
-Applies option [trim], as supported by [decomment].
+Corresponding options, as supported by [decomment]:
 
-#### safe
-
-Applies option [safe], as supported by [decomment].  
+* [safe]
+* [space]
+* [trim]
 
 ## License
 
@@ -77,7 +77,8 @@ Copyright © 2016 [Vitaly Tomilov](https://github.com/vitaly-t);
 Released under the MIT license.
 
 [decomment]:https://github.com/vitaly-t/decomment
-[trim]:https://github.com/vitaly-t/decomment#optionstrim--boolean
 [safe]:https://github.com/vitaly-t/decomment#optionssafe--boolean
+[space]:https://github.com/vitaly-t/decomment#optionsspace--boolean
+[trim]:https://github.com/vitaly-t/decomment#optionstrim--boolean
 [decomment.text]:https://github.com/vitaly-t/decomment#decommenttexttext-options--string
 [decomment.html]:https://github.com/vitaly-t/decomment#decommenthtmlhtml-options--string
