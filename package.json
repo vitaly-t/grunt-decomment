@@ -1,6 +1,6 @@
 {
   "name": "grunt-decomment",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Removes comments from JSON, JavaScript, CSS, HTML, etc.",
   "files": [
     "tasks"
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "cli-color": "1.1",
-    "decomment": "^0.7.2"
+    "decomment": "^0.7.4"
   },
   "devDependencies": {}
 }

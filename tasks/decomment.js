@@ -8,16 +8,16 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('decomment', 'Removes comments from files.', function () {
 
-        var type, name = 'decomment', opt = this.options();
+        var type, method = 'decomment', opt = this.options();
 
         switch (opt.type) {
             case 'text':
                 type = decomment.text;
-                name += '.text';
+                method += '.text';
                 break;
             case 'html':
                 type = decomment.html;
-                name += '.html';
+                method += '.html';
                 break;
             default:
                 type = decomment;
@@ -36,14 +36,14 @@ module.exports = function (grunt) {
                 try {
                     result = type(code, opt);
                 } catch (e) {
-                    grunt.log.writeln(color.cyan(name + '(') + file + color.cyan(')') + ' - ' + color.redBright("FAIL"));
+                    grunt.log.writeln(color.cyan(method + '(') + file + color.cyan(')') + ' - ' + color.redBright("FAIL"));
                     throw e;
                 }
                 grunt.file.write(outFile, result);
                 grunt.log.writeln(outFile + " - " + color.green("OK"));
             })
         });
-        grunt.log.writeln(color.cyan(name + '()') + ' - ' + color.green("OK"));
+        grunt.log.writeln(color.cyan(method + '()') + ' - ' + color.green("OK"));
 
     });
 };

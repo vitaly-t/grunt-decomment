@@ -43,8 +43,17 @@ module.exports = function (grunt) {
                 },
                 files: {
                     "output1.html": "input1.html",
-                    "index.html": "index.html" // rewrite the source file;
+                    "index.html": "index.html", // rewrite the source file;
+                    "./.tmp/index.html": "./.tmp/index.html"
                 }
+            },
+            withCwd: {
+                options: {
+                    type: 'text'
+                },
+                src: ['./*.css', './**/*.css', '!./vendor/**/*'], // array style with globs 
+                dest: './', // output folder
+                cwd: './dist/' // current working directory
             }
         }
     });
