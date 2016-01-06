@@ -8,6 +8,16 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask('decomment', 'Removes comments from files.', function () {
 
+        var files = this.data.files;
+        if (files) {
+            for (var f in files) {
+                var src = files[f];
+                if (!grunt.file.exists(src)) {
+                    throw new Error("File '" + src + "' not found.");
+                }
+            }
+        }
+
         var type, method = 'decomment', opt = this.options();
 
         switch (opt.type) {
@@ -27,7 +37,6 @@ module.exports = function (grunt) {
         this.files.forEach(function (byDest) {
             var cwd = byDest.cwd || '';
             var dest = path.join(cwd, byDest.dest);
-
             byDest.src.forEach(function (f) {
                 var file = path.join(cwd, f);
                 var outFile = grunt.file.isDir(dest) ? path.join(dest, f) : dest;
