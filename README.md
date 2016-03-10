@@ -72,11 +72,12 @@ Changes the default call into [decomment] to one according to the value:
 * `text` - use method [decomment.text]
 * `html` - use method [decomment.html]
 
-#### safe, space, trim
+#### safe, ignore, space, trim
 
 Options supported by [decomment]:
 
 * [safe]
+* [ignore]
 * [space]
 * [trim]
 
@@ -89,5 +90,6 @@ Released under the MIT license.
 [safe]:https://github.com/vitaly-t/decomment#optionssafe--boolean
 [space]:https://github.com/vitaly-t/decomment#optionsspace--boolean
 [trim]:https://github.com/vitaly-t/decomment#optionstrim--boolean
+[ignore]:https://github.com/vitaly-t/decomment#optionsignore--regexp--regexp
 [decomment.text]:https://github.com/vitaly-t/decomment#decommenttexttext-options--string
 [decomment.html]:https://github.com/vitaly-t/decomment#decommenthtmlhtml-options--string
