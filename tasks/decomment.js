@@ -1,7 +1,7 @@
 'use strict';
 
 var decomment = require('decomment');
-var color = require('cli-color');
+var color = require('picocolors');
 var path = require('path');
 
 module.exports = function (grunt) {
