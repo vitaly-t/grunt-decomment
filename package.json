@@ -33,8 +33,7 @@
     "npm": ">=1.4"
   },
   "dependencies": {
-    "cli-color": "1.1",
-    "decomment": "^0.8.3"
-  },
-  "devDependencies": {}
+    "decomment": "^0.8.3",
+    "picocolors": "^1.1.1"
+  }
 }
